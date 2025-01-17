@@ -1,0 +1,437 @@
+ /* General Styles */
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Open Sans, Roboto, Oxygen, Ubuntu, Cantarell, Lato, Helvetica Neue, sans-serif;
+}
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    background: transparent;
+    position: relative;
+}
+.navbar .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 25px;
+}
+.navbar .logo img {
+    height: 25px;
+}
+.navbar .logo span {
+    font-size: 20px;
+    font-weight: 550;
+    color: #333;
+    letter-spacing: 0.5px;
+}
+.navbar .menu {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-left: 20px; /* Ensures it starts after the logo */
+}
+.navbar .menu a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    position: relative;
+}
+.navbar .menu a:hover {
+    color: #ff6600;
+}
+.navbar .menu a.active::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #ff6600;
+}
+.navbar .buttons {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Pushes buttons to the right side */
+    gap: 10px;
+}
+.navbar .buttons a {
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px 12px;
+    border: 1px solid transparent;
+    border-radius: 2.4px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+.navbar .buttons .sign-in {
+    color: #ff6600;
+    background: none;
+}
+.navbar .buttons .sign-in:hover {
+    background-color: #ff6600;
+    color: #fff;
+}
+.navbar .buttons .sign-up {
+    color: #fff;
+    background-color: #ff6600;
+}
+.navbar .buttons .sign-up:hover {
+    background-color: #e55a00;
+}
+
+/* Hamburger Icon */
+.navbar .icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    margin-left: auto; /* Pushes buttons to the right side */
+}
+
+/* Mobile Menu */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: -100%; /* Initially hidden */
+    width: 250px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: left 0.3s ease-in-out;
+    z-index: 1000;
+}
+.mobile-menu .menu {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+.mobile-menu .buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    background-image: url('./images/hero1.svg'); /* Replace with the correct image path */
+    background-size: contain; /* Ensures the image maintains its aspect ratio */
+    background-repeat: no-repeat;
+    background-position: center right;
+    height: 100vh;
+}
+
+.text-content {
+    max-width: 50%;
+    text-align: left;
+    margin-left: 30px;
+    margin-bottom: 200px;
+}
+
+#red-text {
+    color: #ff8434;
+    font-size: 12px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.text-content h1 {
+    font-size: 3.15rem;
+    font-weight: 700;
+    color: #2c3e50;
+    line-height: 63px;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+.text-content p {
+    font-size: 19px;
+    color: rgb(44, 62, 80);
+    margin-bottom: 30px;
+}
+.cta-button {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    background-color: #ff6600;
+    padding: 14px 32px;
+    border-radius: 2.4px;
+    transition: background-color 0.3s ease;
+}
+.cta-button:hover {
+    background-color: #e55a00;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.head-p {
+    color: #ff8434;
+    font-size: 12px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin: 20px 0;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 16px;
+    font-size: 43px;
+    font-weight: 700;
+    line-height: 54px;
+    text-align: center;
+}
+
+.cardtitle {
+    font-size: 18px;
+    padding-top: 10px;
+    text-align: center;
+    color: #333;
+    margin-bottom: 10px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.cardtext {
+    font-size: 14px;
+    font-family:Arial, Helvetica, sans-serif;
+    line-height: 25px;
+    color: #666;
+}
+
+.card code {
+    display: block;
+    background-color: #F5F7FB;
+    padding: 5px;
+    width: 320px;
+    margin-left: -15px;
+    border-radius: 5px;
+    margin-top: 10px;
+    text-align: left;
+    font-family: monospace;
+    color: #333;
+    white-space: pre-wrap;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.btn {
+    color: #ff6600;
+    text-align: center;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.btn:hover {
+    background-color: #F4F5F6;
+    border-radius: 2.4px;
+    color: #ff6600;
+}
+.step code {
+    display: block;
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+    text-align: left;
+    font-family: monospace;
+    color: #333;
+    white-space: pre-wrap;
+}
+
+.faq {
+    margin-top: 100px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.faq .fap-p {
+    color: #ff8434;
+    font-size: 12px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.faq h2 {
+    margin-bottom: 30px;
+    color: #2c3e50;
+    font-size: 2.7rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.faq-item {
+    background: #fff;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 0.1px solid rgb(237, 233, 233);
+    border-left: 3px solid #329199 ;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.faq-item:hover {
+    background-color: #f4f4f4;
+}
+
+.faq-item p {
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 26px;
+    text-align: left;
+    color: #2C3E50;
+    padding-right: 48px;
+}
+
+.faq-item span {
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: #ff6600;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.faq-button {
+    background-color: #ff6600;
+    margin-top: 32px;
+    color: #fff;
+    border: none;
+    position: relative;
+    left: 41%;
+    border-radius: 2.4px;
+    padding: 8px 32px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 600;
+    height: 52px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.faq-button:hover {
+    background-color: #e05500;
+}
+
+.trust {
+    margin: 110px 0;
+    padding: 40px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.trust h2 {
+    margin-bottom: 20px;
+    color: #ff8434;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.trust p {
+    font-size: 32px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 40px;
+    text-align: center;
+    color: rgb(44, 62, 80);
+    margin-bottom: 20px;
+}
+
+.trust .trust-button {
+    background-color: #F66100;
+    color: #fff;
+    border: none;
+    border-radius: 2.4px;
+    padding: 8px 32px;
+    font-size: 16px;
+    height: 52px;
+    margin-top: 32px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.trust .trust-button:hover {
+    background-color: #e05500;
+}
+
+
+/* Styling footer section */
+.footer {
+    background-color: #404040;
+    color: #aaa;
+    padding: 30px 10px;
+    text-align: center;
+}
+
+.gray-line {
+    border: none;
+    height: 1px; 
+    background-color: #8a8888;
+    width: 90%;
+    margin: auto;
+}
+
+.footer p {
+    font-size: 12px;
+    font-style: italic;
+    color: rgb(187, 187, 187);
+    margin-top: 20px;
+}
+
+.footer .social-links {
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer .social-links a {
+    color: rgb(255, 132, 52);
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.footer .social-links a:hover {
+    text-decoration: underline;
+}
+
+.footer .footer-links {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    flex-wrap: wrap;
+}
+
+.footer .footer-links a {
+    color: rgb(255, 132, 52);
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.footer .footer-links a:hover {
+    text-decoration: underline;
+}

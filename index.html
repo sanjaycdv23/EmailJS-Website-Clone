@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EmailJS Website Clone</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaquery.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <!-- Logo -->
+        <div class="logo">
+            <img src="./images/logo.svg" alt="Logo">
+            <span>EmailJS</span>
+        </div>
+        <!-- Menu Links -->
+        <div class="menu">
+            <a href="#" class="active">Home</a>
+            <a href="#">Docs</a>
+            <a href="#">Pricing</a>
+        </div>
+        <!-- Buttons (Desktop View) -->
+        <div class="buttons">
+            <a href="#" class="sign-in">Sign In</a>
+            <a href="#" class="sign-up">Sign Up Free</a>
+        </div>
+        <!-- Hamburger Icon -->
+        <!-- (☰) is displayed using the Unicode character &#9776; Clicking on it triggers the toggleMobileMenu() function to open/close the mobile menu. -->
+        <span class="icon" onclick="toggleMobileMenu()">&#9776;</span>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="menu">
+            <a href="#" class="active">Home</a>
+            <a href="#">Docs</a>
+            <a href="#">Pricing</a>
+        </div>
+        <div class="buttons">
+            <a href="#" class="sign-in">Sign In</a>
+            <a href="#" class="sign-up">Sign Up Free</a>
+        </div>
+    </div>
+
+    <div class="section">
+        <!-- Text Content -->
+        <div class="text-content">
+            <p id="red-text">{ 01. GET STARTED }</p>
+            <h1>Send Email Directly <br> From Your Code</h1>
+            <p>No server code needed. Focus on things that matter!</p>
+            <a href="#" class="cta-button">CREATE FREE ACCOUNT</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <p class="head-p">{ 02. What You Need To Know }</p>
+        <h2>How does it work?</h2>
+
+        <div class="container my-5">
+            <div class="row gx-3 gy-4">
+                <!-- Step 1 -->
+                <div class="col-md-4">
+                    <div class="card text-center h-100 p-3 border-0">
+                        <img src="./images/step1.svg" class="card-img-top mx-auto" alt="SMTP Icon" style="width: 208px; height: 160px;">
+                        <div class="card-body">
+                            <h5 class="card-title cardtitle">Connect your email service</h5>
+                            <p class="card-text cardtext">Choose from a wide variety of email services. We support both transactional email services (Mailgun, Mailjet, Mailtrap, SendinBlue, SendGrid, Amazon SES, and Postmark) and personal email services (AOL, Gmail, FastMail, iCloud, Mail.ru, Outlook, Yahoo, Yandex, and Zoho).</p>
+                        </div>
+                        <div class="card-footer bg-white border-0">
+                            <a href="#" class="btn text-uppercase">Connect Service</a>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Step 2 -->
+                <div class="col-md-4">
+                    <div class="card text-center h-100 p-3 border-0">
+                        <img src="./images/step2.svg" class="card-img-top mx-auto" alt="Template Icon" style="width: 208px; height: 160px;">
+                        <div class="card-body">
+                            <h5 class="card-title cardtitle">Create email template</h5>
+                            <p class="card-text cardtext">Easily build your own template. Choose the tool most suitable for you: text editor or code editor. Templates are parameterized so that you can further customize them from your code.</p>
+                        </div>
+                        <div class="card-footer bg-white border-0">
+                            <a href="#" class="btn text-uppercase">Create Template</a>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Step 3 -->
+                <div class="col-md-4">
+                    <div class="card text-center h-100 p-3 border-0">
+                        <img src="./images/step3.svg" class="card-img-top mx-auto" alt="Code Icon" style="width: 208px; height: 160px;">
+                        <div class="card-body">
+                            <h5 class="card-title cardtitle">Send email from your code</h5>
+                            <p class="card-text cardtext">
+                                Add one of our SDKs and start sending emails!
+                                <code>var params = { <br>   name: 'John',<br>   reply_email: 'john@example.com',<br>   message: 'This is awesome!'<br> }; emailjs.send('gmail','feedback',params);</code>
+                            </p>
+                        </div>
+                        <div class="card-footer bg-white border-0">
+                            <a href="#" class="btn text-uppercase">Install SDK</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="faq">
+            <p class="fap-p">{ 03. Frequently Asked Questions }</p>
+            <h2>FAQ</h2>
+            <div class="faq-item">
+                <p>Can I use EmailJS for free?</p>
+                <span>+</span>
+            </div>
+            <div class="faq-item">
+                <p>Can't I use services like Sendgrid?</p>
+                <span>+</span>
+            </div>
+            <div class="faq-item">
+                <p>Does EmailJS expose spam?</p>
+                <span>+</span>
+            </div>
+            <div class="faq-item">
+                <p>Can I send HTML emails?</p>
+                <span>+</span>
+            </div>
+            <div class="faq-item">
+                <p>What about plain text emails?</p>
+                <span>+</span>
+            </div>
+            <button class="faq-button">ASK A QUESTION</button>
+        </div>
+
+        <!-- Trusted Section -->
+        <div class="trust">
+            <h2>{ 04. LOVED AND TRUSTED BY }</h2>
+            <p>Over 25,000 developers around the world <br> trust EmailJS to send emails</p>
+            <button class="trust-button">GET STARTED</button>
+        </div>
+    </div>
+
+     <!-- Footer Section -->
+     <footer class="footer">
+        <hr class="gray-line">
+        <p>Copyright © 2025 EmailJS Pte Ltd, All rights reserved.</p>
+        <div class="social-links">
+            <img src="./images/twitter-icon.svg" alt="Twitter icon" class="footer-icon">
+            <a href="#">@EmailJS_com</a>
+            <img src="./images/github-icon.svg" alt="Github icon" class="footer-icon">
+            <a href="#">emailjs-com</a>
+        </div>
+        <hr class="gray-line">
+        <div class="footer-links">
+            <a href="#">GDPR</a>
+            <a href="#">Privacy</a>
+            <a href="#">HIPAA</a>
+            <a href="#">Terms</a>
+            <a href="#">FADP</a>
+            <a href="#">Status</a>
+            <a href="#">Contact Us</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
